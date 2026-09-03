@@ -148,6 +148,7 @@ function RootComponent() {
       </main>
       <Footer />
       <MobileCTABar />
+      <FloatingWhatsApp />
     </QueryClientProvider>
   );
 }
