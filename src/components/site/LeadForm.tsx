@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { site, whatsappLink } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const fieldClass =
   "w-full border-b border-border bg-transparent py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-accent";
@@ -130,8 +131,8 @@ export function LeadForm({ variant = "full" }: { variant?: "full" | "compact" })
         <button type="submit" className="btn-base btn-solid">
           Book My Consultation
         </button>
-        <a href={whatsappLink} target="_blank" rel="noreferrer" className="link-underline text-xs uppercase tracking-[0.18em]">
-          Or message us on WhatsApp
+        <a href={whatsappLink} target="_blank" rel="noreferrer" className="link-underline inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em]">
+          <WhatsAppIcon size={15} /> Or message us on WhatsApp
         </a>
       </div>
 

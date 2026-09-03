@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, CalendarRange } from "lucide-react";
 import { telLink, whatsappLink } from "@/data/site";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function MobileCTABar() {
   return (
@@ -17,7 +18,7 @@ export function MobileCTABar() {
         rel="noreferrer"
         className="flex items-center justify-center gap-2 border-x border-border py-4 text-[0.68rem] uppercase tracking-[0.16em]"
       >
-        <MessageCircle size={14} strokeWidth={1.5} /> WhatsApp
+        <WhatsAppIcon size={14} /> WhatsApp
       </a>
       <Link
         to="/consultation"
