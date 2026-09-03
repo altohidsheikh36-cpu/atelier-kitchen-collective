@@ -17,8 +17,7 @@ export function FloatingWhatsApp() {
       aria-label={`Chat with ${site.name} on WhatsApp`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group fixed right-4 z-50 flex items-center gap-3 rounded-full bg-[#25D366] py-3.5 pl-3.5 pr-3.5 shadow-lg shadow-black/25 transition-all duration-300 ease-out hover:pr-5 lg:bottom-6 lg:right-6"
-      style={{ bottom: "calc(env(safe-area-inset-bottom) + 5rem)" }}
+      className="group fixed bottom-20 right-4 z-50 flex items-center gap-3 rounded-full bg-[#25D366] py-3.5 pl-3.5 pr-3.5 shadow-lg shadow-black/25 transition-all duration-300 ease-out hover:pr-5 lg:bottom-6 lg:right-6"
     >
       <span className="flex h-7 w-7 shrink-0 items-center justify-center text-white">
         <WhatsAppIcon size={28} title={`Message ${site.name} on WhatsApp`} />
