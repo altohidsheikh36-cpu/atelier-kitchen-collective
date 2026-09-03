@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { nav, site, telLink, whatsappLink } from "@/data/site";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Footer() {
   return (
@@ -43,8 +44,8 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href={whatsappLink} target="_blank" rel="noreferrer" className="link-underline">
-                WhatsApp
+              <a href={whatsappLink} target="_blank" rel="noreferrer" className="link-underline inline-flex items-center gap-2">
+                <WhatsAppIcon size={15} /> WhatsApp
               </a>
             </li>
             <li>

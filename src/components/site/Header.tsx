@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { nav, site, telLink, whatsappLink } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -86,8 +87,8 @@ export function Header() {
               <a href={telLink} className="link-underline">
                 {site.phoneDisplay}
               </a>
-              <a href={whatsappLink} target="_blank" rel="noreferrer" className="link-underline">
-                WhatsApp us
+              <a href={whatsappLink} target="_blank" rel="noreferrer" className="link-underline inline-flex items-center gap-2">
+                <WhatsAppIcon size={16} /> WhatsApp us
               </a>
             </div>
           </nav>
