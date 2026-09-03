@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { LeadForm } from "@/components/site/LeadForm";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import showroom from "@/assets/showroom.jpg";
 import { site, telLink, whatsappLink } from "@/data/site";
 
@@ -46,8 +47,8 @@ function ContactPage() {
             <div className="py-6">
               <dt className="eyebrow">WhatsApp</dt>
               <dd className="mt-2">
-                <a href={whatsappLink} target="_blank" rel="noreferrer" className="link-underline font-display text-2xl">
-                  Message us
+                <a href={whatsappLink} target="_blank" rel="noreferrer" className="link-underline font-display text-2xl inline-flex items-center gap-3">
+                  <WhatsAppIcon size={22} /> Message us
                 </a>
               </dd>
             </div>
