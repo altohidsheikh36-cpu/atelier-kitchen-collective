@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, MessageCircle, CalendarRange } from "lucide-react";
+import { Phone, CalendarRange } from "lucide-react";
 import { telLink, whatsappLink } from "@/data/site";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
