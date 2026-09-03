@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { nav, site, telLink, whatsappLink } from "@/data/site";
 import { cn } from "@/lib/utils";
+import logoImg from "@/assets/logo.png";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Header() {
@@ -32,7 +33,7 @@ export function Header() {
     >
       <div className="shell flex h-[72px] items-center justify-between md:h-[88px]">
         <Link to="/" className="group flex items-center gap-3 leading-none" onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="Dream Maker Kitchen Gallery Logo" className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover" />
+          <img src={logoImg} alt="Dream Maker Kitchen Gallery Logo" className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover" />
           <div className="flex flex-col">
             <span className="font-display text-lg tracking-tight md:text-xl">Dream Maker</span>
             <span className="eyebrow mt-1 text-[0.58rem] md:text-[0.62rem]">Kitchen Gallery</span>
