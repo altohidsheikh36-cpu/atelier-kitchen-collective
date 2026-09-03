@@ -95,7 +95,7 @@ function ProjectDetail() {
           <Reveal
             key={`${image.src}-${i}`}
             delay={(i % 2) * 90}
-            className={i === 0 ? "md:col-span-2" : undefined}
+            className={i === 0 ? "md:col-span-2" : ""}
           >
             <div className={`media ${i === 0 ? "aspect-[16/9]" : "aspect-[4/3]"}`}>
               <img src={image.src} alt={image.alt} loading="lazy" width={1600} height={1100} />

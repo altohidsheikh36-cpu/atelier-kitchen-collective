@@ -143,22 +143,28 @@ function Home() {
         </div>
 
         <div className="mt-14 md:mt-20">
-          <Reveal className="shell">
-            <Link
-              to="/projects/$slug"
-              params={{ slug: projects[0].slug }}
-              className="group grid gap-8 md:grid-cols-12 md:items-end"
-            >
-              <div className="media media-zoom aspect-[16/10] md:col-span-9">
-                <img src={projects[0].hero} alt={projects[0].alt} loading="lazy" width={1600} height={1100} />
-              </div>
-              <div className="md:col-span-3">
-                <p className="eyebrow">{projects[0].propertyType} · {projects[0].year}</p>
-                <h3 className="text-h3 mt-4">{projects[0].title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{projects[0].intro}</p>
-              </div>
-            </Link>
-          </Reveal>
+          {(() => {
+            const featured = projects[0];
+            if (!featured) return null;
+            return (
+              <Reveal className="shell">
+                <Link
+                  to="/projects/$slug"
+                  params={{ slug: featured.slug }}
+                  className="group grid gap-8 md:grid-cols-12 md:items-end"
+                >
+                  <div className="media media-zoom aspect-[16/10] md:col-span-9">
+                    <img src={featured.hero} alt={featured.alt} loading="lazy" width={1600} height={1100} />
+                  </div>
+                  <div className="md:col-span-3">
+                    <p className="eyebrow">{featured.propertyType} · {featured.year}</p>
+                    <h3 className="text-h3 mt-4">{featured.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{featured.intro}</p>
+                  </div>
+                </Link>
+              </Reveal>
+            );
+          })()}
 
           <div className="shell mt-14 grid gap-10 md:mt-20 md:grid-cols-2 md:gap-12">
             {projects.slice(1, 3).map((project, i) => (
