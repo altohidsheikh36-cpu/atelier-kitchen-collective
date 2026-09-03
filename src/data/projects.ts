@@ -21,7 +21,7 @@ export type Project = {
   title: string;
   location: string; // PLACEHOLDER until confirmed
   propertyType: "Apartment" | "Villa" | "Residence";
-  style: "Modern" | "Contemporary" | "Classic";
+  style: "Modern" | "Contemporary" | "Classic" | "Minimal" | "Luxury";
   layout: string;
   year: string;
   intro: string;
